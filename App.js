@@ -3,6 +3,7 @@ import Home from './screens/home';
 import { Alert, FlatList, ScrollView, StyleSheet, Text, View, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
+import StackNavigator from './routes/drawer';
 
 /* This is how to create a function like componentDidMount in a functional component instead of a class*/
 const getFonts = () =>  Font.loadAsync({
@@ -15,7 +16,7 @@ export default function App() {
   /*Here is where we check to see if the state of font is loaded*/
   if (fontsLoaded) {
     return (
-      <Home/>
+      <StackNavigator/>
     ); 
   }else {
     return(
